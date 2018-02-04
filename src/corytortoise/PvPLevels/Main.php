@@ -47,8 +47,8 @@
             if($data->getKills() == $level["kills"]) {
               $player->sendPopup(C::GREEN . "Level up");
               $data->levelUp();
-              foreach($level["commands"] as $command) {
-                $cmd = str_replace(["%p", "%k", "%d", "%kdr", "%l"], [$player->getName(), $data->getKills(), $data->getDeaths(), $data->getKdr(), $data->getLevel()], $command);
+              foreach($level["commands"] as $cmd) {
+                $cmd = str_replace(["%p", "%k", "%d", "%kdr", "%l"], [$player->getName(), $data->getKills(), $data->getDeaths(), $data->getKdr(), $data->getLevel()], $cmd);
                 $this->getServer()->dispatchCommand(new ConsoleCommandSender(), $cmd);
               }
             }
