@@ -2,10 +2,10 @@ name: PvPLevels
 author: corytortoise
 main: corytortoise\PvPLevels\Main
 version: "1.0"
-api: [2.0.0, 3.0.0-ALPHA9]
-description: Stores PvP stats and enables leveling for kills.
+api: [2.0.0, 3.0.0-ALPHA10]
+description: §dStores PvP stats and enables leveling for kills.
 
 commands:
   pvpstats:
-    description: Shows PvP Statistics
+    description:§b Shows PvP Statistics
     usage: /pvpstats [player]
