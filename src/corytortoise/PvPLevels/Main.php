@@ -64,8 +64,8 @@
           return new PlayerData($this, $name);
         }
 
-        public function onCommand(CommandSender $sender, Command $command, $label, array $args) {
-          if(strtolower($command->getName()) == "pvpstats") {
+        public function onCommand(CommandSender $sender, Command $cmd, $label, array $args): bool {
+          if(strtolower($cmd->getName()) == "pvpstats") {
             if($sender instanceof Player) {
               if(isset($args[0])) {
               $player = $this->getServer()->getPlayerExact($args[0]);
